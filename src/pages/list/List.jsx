@@ -14,7 +14,7 @@ const List = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`/api/v1/myrestaurantbookings/${restaurant._id}`);
-        console.log(response);
+      
       
         // Filter the bookings with status === 'Checked' or status === 'Processing'
         const pendingAndProcessingBookings = response.data.bookings.filter((booking) => {
@@ -28,7 +28,9 @@ const List = () => {
     };
 
     fetchData();
-  }, []);
+  }, [restaurant._id]);
+
+ 
 
 
   return (

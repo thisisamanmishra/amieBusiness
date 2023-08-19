@@ -59,10 +59,10 @@ const Sidebar = () => {
               <span>Bookings</span>
             </li>
           </Link>
-          <Link to="/products" style={{ textDecoration: "none" }}>
+          <Link to="/newbooking" style={{ textDecoration: "none" }}>
             <li>
             <PersonOutlineIcon className="icon" />
-              <span>Update Details</span>
+              <span>Create Restaurant</span>
             </li>
           </Link>
           <Link to="/allbookings" style={{ textDecoration: "none" }}>

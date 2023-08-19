@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import Sidebar from "../../components/sidebar/Sidebar"
 import Navbar from "../../components/navbar/Navbar"
-import Datatable from "../../components/datatable/Datatable"
+import AllDatatable from "../../components/AllDatable/AllDatable"
 
 const AllList = () => {
   const { restaurant } = useSelector((state) => state.restaurantState);
@@ -35,7 +35,7 @@ const AllList = () => {
       <Sidebar/>
       <div className="listContainer">
         <Navbar/>
-        <Datatable userData={bookingData} />
+        <AllDatatable userData={bookingData} />
       </div>
     </div>
   )

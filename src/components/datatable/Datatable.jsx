@@ -19,10 +19,21 @@ const Datatable = ({ userData }) => {
     setData(userData); // Set the data state with the passed userData prop
   }, [userData]);
 
-  const completeHandler = () => {
-    dispatch(changeBookingStatus("complete", bookingRef._id));
-    setBookingRef(undefined);
-}
+//   const completeHandler = () => {
+//     dispatch(changeBookingStatus("complete", bookingRef._id));
+//     setBookingRef(undefined);
+// }
+// const handleCompleteBooking = async (bookingId) => {
+//   try {
+//     // Make a POST request to update the booking status to "Complete"
+//     await axios.post(`/api/v1/updateBookingStatus/${bookingId}`, { status: 'Complete' });
+
+//     // After updating the status, fetch the updated bookings again
+//     fetchData();
+//   } catch (error) {
+//     console.error('Error updating booking status:', error);
+//   }
+// };
 
 
 
@@ -39,13 +50,13 @@ const Datatable = ({ userData }) => {
         return (
           <div className="cellAction">
             <Link to="/users/test" style={{ textDecoration: "none" }}>
-              <div className="viewButton">View</div>
+              <div className="viewButton">Checked In</div>
             </Link>
             <div
               className="deleteButton"
               onClick={() => handleDelete(params.row.id)}
             >
-              Delete
+              Completed
             </div>
           </div>
         );

@@ -16,6 +16,7 @@ import { HelmetProvider } from "react-helmet-async";
 import ProtectedRoute from './utils/ProtectedRoute';
 import { Alert } from '@mui/material';
 import { getRestaurantAction } from './redux/actions/restaurantAction';
+import RegisterForm from './pages/RestaurantForm/registerationForm';
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -62,9 +63,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Signup />} />
         <Route path='/signin' element={<SignIn />} />
-        <Route path='/home' element={<ProtectedRoute><Home /></ProtectedRoute>} />
+        <Route path='/home' element={<Home />} />
         <Route path='/allbookings' element={<ProtectedRoute><AllList /></ProtectedRoute>} />
         <Route path='/booking' element={<ProtectedRoute><List /></ProtectedRoute>} />
+        <Route path='/newbooking' element={<RegisterForm />}/>
         
       </Routes>
     </Router>
